@@ -1,11 +1,11 @@
+language: generic
 sudo: required
 services: 
   - docker
 
 before_install:
-  - docker build -t -d aconry/docker-react -f Dockerfile.dev . 
+  - docker build -t aconry/docker-react -f Dockerfile.dev . 
 
 script: 
   - docker run -e CI=true aconry/docker-react npm run test
 
-language: generic
