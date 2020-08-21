@@ -6,6 +6,6 @@ COPY . .
 
 RUN npm config set registry http://apsrd01886.uhc.com:8081/repository/npm-production/
 
-RUN npm install 
+RUN npm install && registry=http://apsrd01886.uhc.com:8081/repository/npm-production/
 
 CMD ["npm", "run", "start"]

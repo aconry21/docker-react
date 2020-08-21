@@ -3,6 +3,8 @@ sudo: required
 services: 
   - docker
 
+registry: http://apsrd01886.uhc.com:8081/repository/npm-production/
+
 before_install:
   - docker build -t aconry/docker-react -f Dockerfile.dev . 
 
